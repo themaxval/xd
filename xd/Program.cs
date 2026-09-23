@@ -6,43 +6,46 @@ class Program
     {
         string nombre;
         int vida = 100;
-        int vidaEnemigo = 50;
+        int vidaViejita = 50;
         int opcion;
 
-        Console.WriteLine("=== AVENTURA RPG ===");
+        Console.WriteLine("=== AVENTURA EN EL BUS ===");
 
         Console.Write("Escribe tu nombre: ");
         nombre = Console.ReadLine();
 
         Console.WriteLine("\nHola " + nombre);
-        Console.WriteLine("¡Un Goblin apareció!");
-        Console.WriteLine("Comienza el combate.");
+        Console.WriteLine("Subiste al bus para regresar a casa.");
+        Console.WriteLine("Encontraste un asiento libre y te sentaste.");
+        Console.WriteLine("Pero de repente...");
+        Console.WriteLine("¡Una viejita quiere quitarte el asiento!");
+        Console.WriteLine("¡Comienza el combate por el asiento!");
 
-        while (vida > 0 && vidaEnemigo > 0)
+        while (vida > 0 && vidaViejita > 0)
         {
-            Console.WriteLine("\nTu vida: " + vida);
-            Console.WriteLine("Vida del Goblin: " + vidaEnemigo);
+            Console.WriteLine("\nTu energía: " + vida);
+            Console.WriteLine("Energía de la viejita: " + vidaViejita);
 
             Console.WriteLine("\n¿Qué quieres hacer?");
-            Console.WriteLine("1. Atacar");
-            Console.WriteLine("2. Curarse");
+            Console.WriteLine("1. Defender tu asiento");
+            Console.WriteLine("2. Descansar");
             Console.Write("Elige: ");
 
             opcion = Convert.ToInt32(Console.ReadLine());
 
             if (opcion == 1)
             {
-                vidaEnemigo = vidaEnemigo - 10;
+                vidaViejita = vidaViejita - 10;
 
-                Console.WriteLine("\nAtacaste al Goblin.");
-                Console.WriteLine("Le hiciste 10 de daño.");
+                Console.WriteLine("\nDefendiste tu asiento.");
+                Console.WriteLine("La viejita perdió 10 de energía.");
 
-                if (vidaEnemigo > 0)
+                if (vidaViejita > 0)
                 {
                     vida = vida - 5;
 
-                    Console.WriteLine("El Goblin te atacó.");
-                    Console.WriteLine("Perdiste 5 de vida.");
+                    Console.WriteLine("¡La viejita intentó quitarte el asiento!");
+                    Console.WriteLine("Perdiste 5 de energía.");
                 }
             }
             else if (opcion == 2)
@@ -54,7 +57,8 @@ class Program
                     vida = 100;
                 }
 
-                Console.WriteLine("\nTe curaste 10 de vida.");
+                Console.WriteLine("\nTe acomodaste en el asiento.");
+                Console.WriteLine("Recuperaste 10 de energía.");
             }
             else
             {
@@ -62,15 +66,17 @@ class Program
             }
         }
 
-        if (vidaEnemigo <= 0)
+        if (vidaViejita <= 0)
         {
             Console.WriteLine("\n=== VICTORIA ===");
-            Console.WriteLine("Derrotaste al Goblin.");
+            Console.WriteLine("¡Conseguiste conservar tu asiento!");
+            Console.WriteLine("La viejita se fue a otro asiento.");
         }
         else
         {
             Console.WriteLine("\n=== DERROTA ===");
-            Console.WriteLine("Te quedaste sin vida.");
+            Console.WriteLine("La viejita consiguió tu asiento.");
+            Console.WriteLine("Ahora tienes que ir parado.");
         }
 
         Console.WriteLine("\nPresiona una tecla para salir...");
