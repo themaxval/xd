@@ -15,10 +15,10 @@ class Program
         nombre = Console.ReadLine();
 
         Console.WriteLine("\nHola " + nombre);
-        Console.WriteLine("Subiste al bus para regresar a casa.");
-        Console.WriteLine("Encontraste un asiento libre y te sentaste.");
+        Console.WriteLine("Subiste al bus, toca un largo viaje de regreso a casa.");
+        Console.WriteLine("Encontraste un asiento libre para dormir rico todo el viaje y te sentaste.");
         Console.WriteLine("Pero de repente...");
-        Console.WriteLine("¡Una viejita quiere quitarte el asiento!");
+        Console.WriteLine("¡Una vieja quiere quitarte el asiento!");
         Console.WriteLine("¡Comienza el combate por el asiento!");
 
         while (vida > 0 && vidaViejita > 0)
