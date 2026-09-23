@@ -15,7 +15,7 @@ class Program
         nombre = Console.ReadLine();
 
         Console.WriteLine("\nHola " + nombre);
-        Console.WriteLine("Subiste al bus, toca un largo viaje de regreso a casa.");
+        Console.WriteLine("Subiste al bus y tienes un largo viaje de regreso a casa.");
         Console.WriteLine("Encontraste un asiento libre para dormir rico todo el viaje y te sentaste.");
         Console.WriteLine("Pero de repente...");
         Console.WriteLine("¡Una vieja quiere quitarte el asiento!");
@@ -71,6 +71,7 @@ class Program
             Console.WriteLine("\n=== VICTORIA ===");
             Console.WriteLine("¡Conseguiste conservar tu asiento!");
             Console.WriteLine("La viejita se fue a otro asiento.");
+            Console.WriteLine("celeras haciendo 67.");
         }
         else
         {
