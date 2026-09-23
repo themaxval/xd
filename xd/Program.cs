@@ -9,7 +9,7 @@ class Program
         int vidaViejita = 50;
         int opcion;
 
-        Console.WriteLine("=== AVENTURA EN EL BUS ===");
+        Console.WriteLine("=== CUIDADO CON LA VEJA ===");
 
         Console.Write("Escribe tu nombre: ");
         nombre = Console.ReadLine();
